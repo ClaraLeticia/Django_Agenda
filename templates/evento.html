@@ -1,0 +1,22 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+    <h2 xmlns:br="http://www.w3.org/1999/html"> Eventos </h2>
+
+    <form action="submit" method="post"> {%  csrf_token %}
+        <label > Título
+            <input type="text" name="title" style="margin-bottom: 20px" >
+        </label> <br>
+        <label> Data
+            <input type="datetime-local" name="date" style="margin-bottom: 20px">
+        </label><br>
+        <label>Descrição</label><br>
+        <textarea name="details" rows="5" cols="24"> </textarea> <br>
+        <button type="submit"> Salvar </button>
+        <a href="/">
+        <button type = "button"> Cancelar </button>
+        </a>
+    </form>
+
+
+{% endblock %}
